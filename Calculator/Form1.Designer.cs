@@ -61,8 +61,8 @@
             label2 = new Label();
             txtHistory = new RichTextBox();
             tableLayoutPanel5 = new TableLayoutPanel();
-            label1 = new Label();
             btnClose = new Label();
+            labelName = new Label();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel6.SuspendLayout();
@@ -77,7 +77,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel6, 0, 0);
-            tableLayoutPanel1.Location = new Point(12, 73);
+            tableLayoutPanel1.Location = new Point(7, 103);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
@@ -127,12 +127,12 @@
             // 
             // btnEval
             // 
-            btnEval.BackColor = Color.FromArgb(15, 15, 15);
+            btnEval.BackColor = Color.Orange;
             btnEval.Dock = DockStyle.Fill;
             btnEval.FlatAppearance.BorderSize = 0;
             btnEval.FlatStyle = FlatStyle.Flat;
             btnEval.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            btnEval.ForeColor = SystemColors.ControlDarkDark;
+            btnEval.ForeColor = SystemColors.ControlLight;
             btnEval.Location = new Point(363, 391);
             btnEval.Name = "btnEval";
             btnEval.Size = new Size(116, 95);
@@ -143,11 +143,12 @@
             // 
             // btnPt
             // 
-            btnPt.BackColor = Color.FromArgb(25, 25, 25);
+            btnPt.BackColor = Color.FromArgb(65, 65, 65);
             btnPt.Dock = DockStyle.Fill;
             btnPt.FlatAppearance.BorderSize = 0;
             btnPt.FlatStyle = FlatStyle.Flat;
             btnPt.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btnPt.ForeColor = SystemColors.Control;
             btnPt.Location = new Point(243, 391);
             btnPt.Name = "btnPt";
             btnPt.Size = new Size(114, 95);
@@ -158,11 +159,12 @@
             // 
             // btn0
             // 
-            btn0.BackColor = Color.FromArgb(25, 25, 25);
+            btn0.BackColor = Color.FromArgb(65, 65, 65);
             btn0.Dock = DockStyle.Fill;
             btn0.FlatAppearance.BorderSize = 0;
             btn0.FlatStyle = FlatStyle.Flat;
             btn0.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn0.ForeColor = SystemColors.Control;
             btn0.Location = new Point(123, 391);
             btn0.Name = "btn0";
             btn0.Size = new Size(114, 95);
@@ -173,11 +175,12 @@
             // 
             // btnNeg
             // 
-            btnNeg.BackColor = Color.FromArgb(25, 25, 25);
+            btnNeg.BackColor = Color.FromArgb(65, 65, 65);
             btnNeg.Dock = DockStyle.Fill;
             btnNeg.FlatAppearance.BorderSize = 0;
             btnNeg.FlatStyle = FlatStyle.Flat;
             btnNeg.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btnNeg.ForeColor = SystemColors.Control;
             btnNeg.Location = new Point(3, 391);
             btnNeg.Name = "btnNeg";
             btnNeg.Size = new Size(114, 95);
@@ -188,12 +191,12 @@
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = Color.FromArgb(15, 15, 15);
+            btnAdd.BackColor = Color.FromArgb(55, 55, 55);
             btnAdd.Dock = DockStyle.Fill;
             btnAdd.FlatAppearance.BorderSize = 0;
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            btnAdd.ForeColor = SystemColors.ControlDarkDark;
+            btnAdd.ForeColor = SystemColors.ControlLight;
             btnAdd.Location = new Point(363, 294);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(116, 91);
@@ -204,11 +207,12 @@
             // 
             // btn3
             // 
-            btn3.BackColor = Color.FromArgb(25, 25, 25);
+            btn3.BackColor = Color.FromArgb(65, 65, 65);
             btn3.Dock = DockStyle.Fill;
             btn3.FlatAppearance.BorderSize = 0;
             btn3.FlatStyle = FlatStyle.Flat;
             btn3.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn3.ForeColor = SystemColors.Control;
             btn3.Location = new Point(243, 294);
             btn3.Name = "btn3";
             btn3.Size = new Size(114, 91);
@@ -219,11 +223,12 @@
             // 
             // btn2
             // 
-            btn2.BackColor = Color.FromArgb(25, 25, 25);
+            btn2.BackColor = Color.FromArgb(65, 65, 65);
             btn2.Dock = DockStyle.Fill;
             btn2.FlatAppearance.BorderSize = 0;
             btn2.FlatStyle = FlatStyle.Flat;
             btn2.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn2.ForeColor = SystemColors.Control;
             btn2.Location = new Point(123, 294);
             btn2.Name = "btn2";
             btn2.Size = new Size(114, 91);
@@ -234,11 +239,12 @@
             // 
             // btn1
             // 
-            btn1.BackColor = Color.FromArgb(25, 25, 25);
+            btn1.BackColor = Color.FromArgb(65, 65, 65);
             btn1.Dock = DockStyle.Fill;
             btn1.FlatAppearance.BorderSize = 0;
             btn1.FlatStyle = FlatStyle.Flat;
             btn1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn1.ForeColor = SystemColors.Control;
             btn1.Location = new Point(3, 294);
             btn1.Name = "btn1";
             btn1.Size = new Size(114, 91);
@@ -249,12 +255,12 @@
             // 
             // btnSub
             // 
-            btnSub.BackColor = Color.FromArgb(15, 15, 15);
+            btnSub.BackColor = Color.FromArgb(55, 55, 55);
             btnSub.Dock = DockStyle.Fill;
             btnSub.FlatAppearance.BorderSize = 0;
             btnSub.FlatStyle = FlatStyle.Flat;
             btnSub.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            btnSub.ForeColor = SystemColors.ControlDarkDark;
+            btnSub.ForeColor = SystemColors.ControlLight;
             btnSub.Location = new Point(363, 197);
             btnSub.Name = "btnSub";
             btnSub.Size = new Size(116, 91);
@@ -265,11 +271,12 @@
             // 
             // btn6
             // 
-            btn6.BackColor = Color.FromArgb(25, 25, 25);
+            btn6.BackColor = Color.FromArgb(65, 65, 65);
             btn6.Dock = DockStyle.Fill;
             btn6.FlatAppearance.BorderSize = 0;
             btn6.FlatStyle = FlatStyle.Flat;
             btn6.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn6.ForeColor = SystemColors.Control;
             btn6.Location = new Point(243, 197);
             btn6.Name = "btn6";
             btn6.Size = new Size(114, 91);
@@ -280,11 +287,12 @@
             // 
             // btn5
             // 
-            btn5.BackColor = Color.FromArgb(25, 25, 25);
+            btn5.BackColor = Color.FromArgb(65, 65, 65);
             btn5.Dock = DockStyle.Fill;
             btn5.FlatAppearance.BorderSize = 0;
             btn5.FlatStyle = FlatStyle.Flat;
             btn5.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn5.ForeColor = SystemColors.Control;
             btn5.Location = new Point(123, 197);
             btn5.Name = "btn5";
             btn5.Size = new Size(114, 91);
@@ -295,11 +303,12 @@
             // 
             // btn4
             // 
-            btn4.BackColor = Color.FromArgb(25, 25, 25);
+            btn4.BackColor = Color.FromArgb(65, 65, 65);
             btn4.Dock = DockStyle.Fill;
             btn4.FlatAppearance.BorderSize = 0;
             btn4.FlatStyle = FlatStyle.Flat;
             btn4.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn4.ForeColor = SystemColors.Control;
             btn4.Location = new Point(3, 197);
             btn4.Name = "btn4";
             btn4.Size = new Size(114, 91);
@@ -310,12 +319,12 @@
             // 
             // btnMultiply
             // 
-            btnMultiply.BackColor = Color.FromArgb(15, 15, 15);
+            btnMultiply.BackColor = Color.FromArgb(55, 55, 55);
             btnMultiply.Dock = DockStyle.Fill;
             btnMultiply.FlatAppearance.BorderSize = 0;
             btnMultiply.FlatStyle = FlatStyle.Flat;
             btnMultiply.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            btnMultiply.ForeColor = SystemColors.ControlDarkDark;
+            btnMultiply.ForeColor = SystemColors.ControlLight;
             btnMultiply.Location = new Point(363, 100);
             btnMultiply.Name = "btnMultiply";
             btnMultiply.Size = new Size(116, 91);
@@ -326,11 +335,12 @@
             // 
             // btn9
             // 
-            btn9.BackColor = Color.FromArgb(25, 25, 25);
+            btn9.BackColor = Color.FromArgb(65, 65, 65);
             btn9.Dock = DockStyle.Fill;
             btn9.FlatAppearance.BorderSize = 0;
             btn9.FlatStyle = FlatStyle.Flat;
             btn9.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn9.ForeColor = SystemColors.Control;
             btn9.Location = new Point(243, 100);
             btn9.Name = "btn9";
             btn9.Size = new Size(114, 91);
@@ -341,11 +351,12 @@
             // 
             // btn8
             // 
-            btn8.BackColor = Color.FromArgb(25, 25, 25);
+            btn8.BackColor = Color.FromArgb(65, 65, 65);
             btn8.Dock = DockStyle.Fill;
             btn8.FlatAppearance.BorderSize = 0;
             btn8.FlatStyle = FlatStyle.Flat;
             btn8.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn8.ForeColor = SystemColors.Control;
             btn8.Location = new Point(123, 100);
             btn8.Name = "btn8";
             btn8.Size = new Size(114, 91);
@@ -356,11 +367,12 @@
             // 
             // btn7
             // 
-            btn7.BackColor = Color.FromArgb(25, 25, 25);
+            btn7.BackColor = Color.FromArgb(65, 65, 65);
             btn7.Dock = DockStyle.Fill;
             btn7.FlatAppearance.BorderSize = 0;
             btn7.FlatStyle = FlatStyle.Flat;
             btn7.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btn7.ForeColor = SystemColors.Control;
             btn7.Location = new Point(3, 100);
             btn7.Name = "btn7";
             btn7.Size = new Size(114, 91);
@@ -371,12 +383,12 @@
             // 
             // btnDiv
             // 
-            btnDiv.BackColor = Color.FromArgb(15, 15, 15);
+            btnDiv.BackColor = Color.FromArgb(55, 55, 55);
             btnDiv.Dock = DockStyle.Fill;
             btnDiv.FlatAppearance.BorderSize = 0;
             btnDiv.FlatStyle = FlatStyle.Flat;
             btnDiv.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            btnDiv.ForeColor = SystemColors.ControlDarkDark;
+            btnDiv.ForeColor = SystemColors.ControlLight;
             btnDiv.Location = new Point(363, 3);
             btnDiv.Name = "btnDiv";
             btnDiv.Size = new Size(116, 91);
@@ -387,12 +399,12 @@
             // 
             // btnMod
             // 
-            btnMod.BackColor = Color.FromArgb(15, 15, 15);
+            btnMod.BackColor = Color.FromArgb(55, 55, 55);
             btnMod.Dock = DockStyle.Fill;
             btnMod.FlatAppearance.BorderSize = 0;
             btnMod.FlatStyle = FlatStyle.Flat;
             btnMod.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            btnMod.ForeColor = SystemColors.ControlDarkDark;
+            btnMod.ForeColor = SystemColors.ControlLight;
             btnMod.Location = new Point(243, 3);
             btnMod.Name = "btnMod";
             btnMod.Size = new Size(114, 91);
@@ -403,12 +415,12 @@
             // 
             // btnDel
             // 
-            btnDel.BackColor = Color.FromArgb(15, 15, 15);
+            btnDel.BackColor = Color.FromArgb(55, 55, 55);
             btnDel.Dock = DockStyle.Fill;
             btnDel.FlatAppearance.BorderSize = 0;
             btnDel.FlatStyle = FlatStyle.Flat;
             btnDel.Font = new Font("Segoe UI", 18F);
-            btnDel.ForeColor = Color.LightSalmon;
+            btnDel.ForeColor = Color.Coral;
             btnDel.Location = new Point(123, 3);
             btnDel.Name = "btnDel";
             btnDel.Size = new Size(114, 91);
@@ -419,12 +431,12 @@
             // 
             // btnClear
             // 
-            btnClear.BackColor = Color.FromArgb(15, 15, 15);
+            btnClear.BackColor = Color.FromArgb(55, 55, 55);
             btnClear.Dock = DockStyle.Fill;
             btnClear.FlatAppearance.BorderSize = 0;
             btnClear.FlatStyle = FlatStyle.Flat;
             btnClear.Font = new Font("Segoe UI", 18F);
-            btnClear.ForeColor = Color.LightSalmon;
+            btnClear.ForeColor = Color.Coral;
             btnClear.Location = new Point(3, 3);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(114, 91);
@@ -500,7 +512,7 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 0);
             tableLayoutPanel2.Controls.Add(txtHistory, 0, 1);
-            tableLayoutPanel2.Location = new Point(506, 73);
+            tableLayoutPanel2.Location = new Point(501, 103);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 8.41424F));
@@ -543,6 +555,7 @@
             label2.AutoSize = true;
             label2.Dock = DockStyle.Fill;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ActiveBorder;
             label2.Location = new Point(3, 0);
             label2.Name = "label2";
             label2.Size = new Size(327, 46);
@@ -556,7 +569,7 @@
             txtHistory.BorderStyle = BorderStyle.None;
             txtHistory.Dock = DockStyle.Fill;
             txtHistory.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            txtHistory.ForeColor = SystemColors.ControlDarkDark;
+            txtHistory.ForeColor = SystemColors.ActiveBorder;
             txtHistory.Location = new Point(9, 55);
             txtHistory.Margin = new Padding(9, 3, 3, 3);
             txtHistory.Name = "txtHistory";
@@ -567,29 +580,17 @@
             // 
             // tableLayoutPanel5
             // 
-            tableLayoutPanel5.ColumnCount = 2;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 90.64588F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 9.35412F));
-            tableLayoutPanel5.Controls.Add(label1, 0, 0);
-            tableLayoutPanel5.Controls.Add(btnClose, 1, 0);
-            tableLayoutPanel5.Location = new Point(12, -1);
+            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel5.Controls.Add(btnClose, 0, 0);
+            tableLayoutPanel5.Location = new Point(847, -2);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel5.Size = new Size(898, 48);
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Size = new Size(62, 48);
             tableLayoutPanel5.TabIndex = 2;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(808, 48);
-            label1.TabIndex = 1;
-            label1.Text = "Standard Calculator";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // btnClose
             // 
@@ -598,9 +599,9 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("SimSun", 12F, FontStyle.Bold);
             btnClose.ForeColor = Color.Bisque;
-            btnClose.Location = new Point(817, 0);
+            btnClose.Location = new Point(3, 0);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(78, 48);
+            btnClose.Size = new Size(56, 48);
             btnClose.TabIndex = 2;
             btnClose.Text = "×";
             btnClose.TextAlign = ContentAlignment.MiddleCenter;
@@ -609,12 +610,25 @@
             btnClose.MouseLeave += BtnClose_MouseLeave;
             btnClose.MouseHover += BtnClose_MouseHover;
             // 
+            // labelName
+            // 
+            labelName.AutoSize = true;
+            labelName.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            labelName.ForeColor = SystemColors.ActiveBorder;
+            labelName.Location = new Point(13, 31);
+            labelName.Name = "labelName";
+            labelName.Size = new Size(315, 45);
+            labelName.TabIndex = 3;
+            labelName.Text = "Standard Calculator";
+            labelName.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(905, 703);
+            ClientSize = new Size(905, 723);
+            Controls.Add(labelName);
             Controls.Add(tableLayoutPanel5);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
@@ -633,6 +647,7 @@
             tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel5.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -662,7 +677,6 @@
         private Button btnDel;
         private Button btnClear;
         private TableLayoutPanel tableLayoutPanel5;
-        private Label label1;
         private TableLayoutPanel tableLayoutPanel6;
         private TextBox txtCurrentOperand;
         private TextBox txtPreviousOperand;
@@ -671,5 +685,6 @@
         private Button button1;
         private Label label2;
         private RichTextBox txtHistory;
+        private Label labelName;
     }
 }

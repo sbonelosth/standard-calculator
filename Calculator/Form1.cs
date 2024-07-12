@@ -23,6 +23,8 @@ namespace Calculator
         {
             if (txtCurrentOperand.Text.Length > 0 && !(txtCurrentOperand.Text.Equals("0")))
             {
+                if (lblOperator.Text.Equals("=")) ResetCalculator();
+
                 decimal digit;
                 if (!decimal.TryParse(txtCurrentOperand.Text[txtCurrentOperand.Text.Length - 1].ToString(), out digit))
                     previousOperation = Operation.None;
@@ -124,20 +126,10 @@ namespace Calculator
 
         private void Evaluate(Operation previousOperation)
         {
-            //string[] historyRes = txtHistory.Text.Split("\n\n");
-            //string[] latestRes = historyRes[historyRes.Length - 1].Split('e');
-
-            //if (txtPreviousOperand.Text.Contains('e'))
-            //{
-            //    double integralVal = double.Parse(latestRes[0]);
-            //    double decimalVal = double.Parse(latestRes[1]);
-            //    txtPreviousOperand.Text = (integralVal * Math.Pow(10, decimalVal)).ToString();
-            //}
-
             if (!decimal.TryParse(txtPreviousOperand.Text, out decimal prev) ||
                 !decimal.TryParse(txtCurrentOperand.Text, out decimal curr))
             {
-                MessageBox.Show("Invalid Operand", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ResetCalculator();
                 return;
             }
 
@@ -227,39 +219,55 @@ namespace Calculator
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData >= Keys.D0 && keyData <= Keys.D9) // Handle numeric keys
+            if (keyData >= Keys.D0 && keyData <= Keys.D9 || keyData == Keys.Oemcomma)
             {
-                int digit = (int)(keyData - Keys.D0);
-                txtCurrentOperand.Text += digit.ToString();
-                return true; // Prevent default handling
-            }
-            else if (keyData == Keys.Add) // Handle '+'
-            {
-                txtCurrentOperand.Text += "+";
+                string keyString = keyData == Keys.Oemcomma ? "," : ((int)(keyData - Keys.D0)).ToString();
+
+                if (keyString.Equals("0") && txtCurrentOperand.Text.Equals("0")) return true;
+                if (keyString.Equals(",") && (lblOperator.Text.Equals("=") || txtCurrentOperand.Text.Contains(","))) return true;
+
+                if (lblOperator.Text.Equals("=")) ResetCalculator();
+                if (txtCurrentOperand.Text.Equals("0") && !keyString.Equals(",")) txtCurrentOperand.Text = "";
+
+                txtCurrentOperand.Text += keyString;
                 return true;
             }
-            else if (keyData == Keys.Subtract) // Handle '-'
+            else
             {
-                txtCurrentOperand.Text += "-";
-                return true;
-            }
-            else if (keyData == Keys.Multiply) // Handle '*'
-            {
-                txtCurrentOperand.Text += "×";
-                return true;
-            }
-            else if (keyData == Keys.Divide) // Handle '/'
-            {
-                txtCurrentOperand.Text += "÷";
-                return true;
-            }
-            else if (keyData == Keys.Enter) // Handle '='
-            {
-                MessageBox.Show("Whatttt");
-                return true;
+                if (previousOperation != Operation.None && txtCurrentOperand.Text != "0")
+                    Evaluate(previousOperation);
+
+                if (string.IsNullOrEmpty(txtCurrentOperand.Text) && string.IsNullOrEmpty(txtPreviousOperand.Text))
+                    return false;
+
+                if (keyData == Keys.Add || keyData == Keys.Subtract || keyData == Keys.Multiply || keyData == Keys.Divide)
+                {
+                    string operationSymbol = keyData switch
+                    {
+                        Keys.Add => "+",
+                        Keys.Subtract => "-",
+                        Keys.Multiply => "×",
+                        Keys.Divide => "÷",
+                        _ => lblOperator.Text
+                    };
+
+                    if (previousOperation != Operation.None && txtCurrentOperand.Text != "0")
+                        Evaluate(previousOperation);
+
+                    lblOperator.Text = operationSymbol;
+                    previousOperation = GetOperationFromSymbol(operationSymbol);
+                    SetOperation(operationSymbol);
+                    return true;
+                }
+                else if (keyData == Keys.Enter) // Handle '='
+                {
+                    lblOperator.Text = "=";
+                    return true;
+                }
+                
             }
 
-            return base.ProcessCmdKey(ref msg, keyData);
+            return true;
         }
 
         private void BtnEval_Click(object sender, EventArgs e)
@@ -296,6 +304,19 @@ namespace Calculator
         private void BtnClearHistory_Click(object sender, EventArgs e)
         {
             txtHistory.Clear();
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84: // WM_NCHITTEST - Mouse Capture Test
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1) // HTCLIENT - Application Client Area
+                        m.Result = (IntPtr)0x2; // HTCAPTION - Application Title Bar
+                    return;
+            }
+            base.WndProc(ref m);
         }
     }
 }
